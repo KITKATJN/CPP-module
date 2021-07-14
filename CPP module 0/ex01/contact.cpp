@@ -1,6 +1,6 @@
 #include "header.hpp"
 
-void Contact::set_contact()
+void Contact::set_contact( void )
 {
 	std::cout << "First name:" << std::endl;
 	std::getline(std::cin, Contact::firstname);

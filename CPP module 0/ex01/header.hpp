@@ -7,7 +7,7 @@
 
 class Contact {
 	public:
-	void		set_contact();
+	void		set_contact( void );
 	std::string	get_contact(std::string str_contact);
 
 	private:
@@ -20,9 +20,9 @@ class Contact {
 
 class Phonebook {
 	public:
-		Phonebook();
+		Phonebook( void );
 		int	fill;
-		int	get_fill();
+		int	get_fill( void );
 		void	add_contact(int index);
 		void	print_phonebook();
 		void	search_contact(int index);

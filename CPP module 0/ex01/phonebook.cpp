@@ -12,7 +12,7 @@ void	Phonebook::add_contact(int index)
 		Phonebook::fill++;
 }
 
-Phonebook::Phonebook()
+Phonebook::Phonebook( void )
 {
 	Phonebook::fill = 0;
 }
@@ -27,7 +27,7 @@ std::string	truncate(std::string str)
 	return str;
 }
 
-void	Phonebook::print_phonebook()
+void	Phonebook::print_phonebook( void )
 {
 	for (int i = 0; i < this->fill; i++)
 	{
