@@ -10,11 +10,10 @@ int main()
 	{
 		std::cout << ">> ";
 		std::getline(std::cin, str);
-
 		if (str == "ADD")
 		{
 			phonebook.add_contact(index);
-			if (index == 7)
+			if (index == NUM_CONTACTS - 1)
 				index = -1;
 			index++;
 		}
@@ -29,7 +28,6 @@ int main()
 				std::getline(std::cin, str);
 				if((int)str[0] > 47 && (int)str[0] < 58 && str[0] != '0' && str.length() == 1)
 				{
-					std::cout << "index -> " << (int)str[0] - '0' << std::endl;
 					phonebook.search_contact((int)str[0] - '0');
 				}
 				else

@@ -5,6 +5,8 @@
 # include <string>
 # include <iomanip>
 
+# define NUM_CONTACTS 8
+
 class Contact {
 	public:
 	void		set_contact( void );
@@ -28,7 +30,7 @@ class Phonebook {
 		void	search_contact(int index);
 
 	private:
-		Contact contacts[8];
+		Contact contacts[NUM_CONTACTS];
 };
 
 std::string	truncate(std::string str);

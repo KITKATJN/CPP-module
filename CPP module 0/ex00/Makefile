@@ -10,6 +10,8 @@ all:	$(NAME)
 $(NAME):	$(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
+.cpp.o:
+	$(CC) $(CFLAGS) -c $< -o $(<:.cpp=.o)
 
 clean:
 	rm -rf $(OBJ)

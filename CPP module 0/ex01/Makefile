@@ -4,11 +4,14 @@ SRCS = main.cpp contact.cpp phonebook.cpp
 OBJ 	=	$(SRCS:.cpp=.o)
 CC = clang++
 
-CFLAGS  = -Wall -Wextra -Werror 
+CFLAGS  = -Wall -Wextra -Werror
 all:	$(NAME)
 
 $(NAME):	$(OBJ) header.hpp
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+.cpp.o:
+	$(CC) $(CFLAGS) -c $< -o $(<:.cpp=.o)
 
 clean:
 	rm -rf $(OBJ)

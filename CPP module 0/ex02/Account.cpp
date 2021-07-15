@@ -31,14 +31,13 @@ int	Account::getNbWithdrawals( void )
 
 void	Account::_displayTimestamp( void )
 {
-	//struct tm start =
 	time_t now = time(0);
 	tm *start = localtime(&now);
 	std::cout << "[" << 1900 + start->tm_year;
 	std::cout << std::setfill('0') << std::setw(2) << 1 + start->tm_mon;
 	std::cout << std::setw(2) << start->tm_mday;
-	std::cout << "_" << std::setw(2) << 5 + start->tm_hour;
-	std::cout << std::setw(2) << 30 + start->tm_min;
+	std::cout << "_" << std::setw(2) << start->tm_hour;
+	std::cout << std::setw(2) << start->tm_min;
 	std::cout << std::setw(2) << start->tm_sec << "] ";
 }
 
@@ -63,18 +62,6 @@ Account::Account( int initial_deposit )
 	std::cout << "amount:" << initial_deposit << ";";
 	std::cout << "created" << std::endl;
 }
-
-// Account::Account( void )
-// {
-// 	Account::_amount = 0;
-// 	Account::_accountIndex = Account::_nbAccounts++;
-// 	Account::_nbDeposits = 0;
-// 	Account::_nbWithdrawals = 0;
-// 	Account::_displayTimestamp();
-// 	std::cout << "index:" << Account::_accountIndex << ";";
-// 	std::cout << "amount:" << 0 << ";";
-// 	std::cout << "created" << std::endl;
-// }
 
 Account::~Account( void )
 {
@@ -112,6 +99,7 @@ bool	Account::makeWithdrawal( int withdrawal )
 	Account::_amount -= withdrawal;
 	std::cout << "amount:" << Account::_amount << ";";
 	Account::_nbWithdrawals++;
+	Account::_totalAmount -= withdrawal;
 	Account::_totalNbWithdrawals++;
 	std::cout << "nb_withdrawals:" << Account::_nbWithdrawals << std::endl;
 	return 1;

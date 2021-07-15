@@ -8,7 +8,7 @@ int	Phonebook::get_fill()
 void	Phonebook::add_contact(int index)
 {
 	Phonebook::contacts[index].set_contact();
-	if (fill < 8)
+	if (fill < NUM_CONTACTS)
 		Phonebook::fill++;
 }
 
@@ -34,7 +34,8 @@ void	Phonebook::print_phonebook( void )
 		std::cout << "|" << std::setw(10) << i + 1;
 		std::cout << "|" << std::setw(10) << truncate(this->contacts[i].get_contact("firstname"));
 		std::cout << "|" << std::setw(10) << truncate(this->contacts[i].get_contact("lastname"));
-		std::cout << "|" << std::setw(10) << truncate(this->contacts[i].get_contact("nickname")) << "|" << std::endl;
+		std::cout << "|" << std::setw(10) << truncate(this->contacts[i].get_contact("nickname"));
+		std::cout << "|" << std::endl;
 	}
 }
 
@@ -48,9 +49,10 @@ void	Phonebook::search_contact(int i)
 		i--;
 		if (i < 0)
 			std::cout << "index wrong!" << std::endl;
-		std::cout << "|" << std::setw(10) << i + 1;
-		std::cout << "|" << std::setw(10) << truncate(this->contacts[i].get_contact("firstname"));
-		std::cout << "|" << std::setw(10) << truncate(this->contacts[i].get_contact("lastname"));
-		std::cout << "|" << std::setw(10) << truncate(this->contacts[i].get_contact("nickname")) << "|" << std::endl;
+		std::cout << this->contacts[i].get_contact("firstname") << std::endl;
+		std::cout << this->contacts[i].get_contact("lastname") << std::endl;
+		std::cout << this->contacts[i].get_contact("nickname") << std::endl;
+		std::cout << this->contacts[i].get_contact("darkest_secret") << std::endl;
+		std::cout << this->contacts[i].get_contact("phone_number") << std::endl;
 	}
 }
