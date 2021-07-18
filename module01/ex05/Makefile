@@ -1,13 +1,13 @@
-NAME = zombie
+NAME = karen
 
-SRCS = main.cpp randomChump.cpp Zombie.cpp
+SRCS = main.cpp Karen.cpp
 OBJ 	=	$(SRCS:.cpp=.o)
 CC = clang++
 
 CFLAGS  = -Wall -Wextra -Werror
 all:	$(NAME)
 
-$(NAME):	$(OBJ) Zombie.hpp
+$(NAME):	$(OBJ) Karen.hpp
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 .cpp.o:

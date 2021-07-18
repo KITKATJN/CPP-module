@@ -7,7 +7,7 @@ CC = clang++
 CFLAGS  = -Wall -Wextra -Werror
 all:	$(NAME)
 
-$(NAME):	$(OBJ)
+$(NAME):	$(OBJ) HumanB.hpp HumanA.hpp Weapon.hpp
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 .cpp.o:

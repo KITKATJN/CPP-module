@@ -1,13 +1,13 @@
 NAME = zombie
 
-SRCS = main.cpp Zombie.cpp ZombieHorde.cpp 
+SRCS = main.cpp Zombie.cpp ZombieHorde.cpp
 OBJ 	=	$(SRCS:.cpp=.o)
 CC = clang++
 
 CFLAGS  = -Wall -Wextra -Werror
 all:	$(NAME)
 
-$(NAME):	$(OBJ)
+$(NAME):	$(OBJ) Zombie.hpp
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 .cpp.o:
