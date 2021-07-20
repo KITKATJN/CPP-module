@@ -18,11 +18,55 @@ public:
 
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );
-	Fixed& operator=(const Fixed &fixed);
 	float toFloat( void ) const;
 	int toInt( void ) const;
+
+	bool operator>(const Fixed &fixed) const ;
+	bool operator<(const Fixed &fixed) const ;
+	bool operator==(const Fixed &fixed) const ;
+	bool operator!=(const Fixed &fixed) const ;
+	bool operator<=(const Fixed &fixed) const ;
+	bool operator>=(const Fixed &fixed) const ;
+
+	Fixed& operator=(const Fixed &fixed);
+	Fixed operator+(const Fixed &fixed) ;
 };
 
 std::ostream &operator<<(std::ostream &os, const Fixed &fixed);
+
+bool Fixed::operator>(const Fixed &fixed) const
+{
+	return this->getRawBits() > fixed.getRawBits();
+}
+
+bool Fixed::operator<(const Fixed &fixed) const
+{
+	return this->getRawBits() < fixed.getRawBits();
+}
+
+bool Fixed::operator>=(const Fixed &fixed) const
+{
+	return this->getRawBits() >= fixed.getRawBits();
+}
+
+bool Fixed::operator<=(const Fixed &fixed) const
+{
+	return this->getRawBits() <= fixed.getRawBits();
+}
+
+bool Fixed::operator==(const Fixed &fixed) const
+{
+	return this->getRawBits() == fixed.getRawBits();
+}
+
+bool Fixed::operator!=(const Fixed &fixed) const
+{
+	return this->getRawBits() != fixed.getRawBits();
+}
+
+Fixed Fixed::operator+(const Fixed &fixed)
+{
+	return Fixed(this->getRawBits() + fixed.getRawBits());
+}
 
 #endif
