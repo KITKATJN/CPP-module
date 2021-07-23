@@ -1,6 +1,6 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(const FragTrap &clap):ClapTrap(clap.name)
+FragTrap::FragTrap( const FragTrap &clap ):ClapTrap(clap.name)
 {
 	hitpoints = clap.hitpoints;
 	attackDamage = clap.attackDamage;
@@ -8,7 +8,7 @@ FragTrap::FragTrap(const FragTrap &clap):ClapTrap(clap.name)
 	std::cout << "ScavTrap " << name << " copied" << std::endl;
 }
 
-FragTrap& FragTrap::operator= (const FragTrap &clap)
+FragTrap& FragTrap::operator= ( const FragTrap &clap )
 {
 	name = clap.name;
 	hitpoints = clap.hitpoints;
@@ -25,12 +25,20 @@ FragTrap::FragTrap( std::string name ):ClapTrap(name)
 	std::cout << "FragTrap " << name << " created" << std::endl;
 }
 
+FragTrap::FragTrap( void ):ClapTrap()
+{
+	ClapTrap::hitpoints = 100;
+	ClapTrap::energypoints = 100;
+	ClapTrap::attackDamage = 30;
+	std::cout << "FragTrap " << name << " created" << std::endl;
+}
+
 FragTrap::~FragTrap()
 {
 	std::cout << "FragTrap " << name << " destroy" << std::endl;
 }
 
-void FragTrap::highFivesGuys(void)
+void FragTrap::highFivesGuys( void )
 {
 	std::cout << "FragTrap " << name << " give high fives";
 	std::cout << std::endl;

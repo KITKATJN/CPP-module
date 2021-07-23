@@ -10,9 +10,10 @@ private:
 	std::string name;
 public:
 	DiamondTrap( std::string name );
+	DiamondTrap( void );
 	~DiamondTrap();
-	DiamondTrap(const DiamondTrap &frag);
-	DiamondTrap& operator= (const DiamondTrap &clap);
+	DiamondTrap( const DiamondTrap &frag );
+	DiamondTrap& operator= ( const DiamondTrap &clap );
 	void whoAmI( void );
 };
 

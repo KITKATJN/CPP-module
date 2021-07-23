@@ -10,6 +10,11 @@ ClapTrap::ClapTrap(const ClapTrap &clap):name(clap.name)
 	std::cout << "ClapTrap " << name << " copied" << std::endl;
 }
 
+ClapTrap::ClapTrap( void ):name("Alex"), hitpoints(10), energypoints(10), attackDamage(0)
+{
+	std::cout << "ClapTrap " << name << " created" << std::endl;
+}
+
 ClapTrap::~ClapTrap()
 {
 	std::cout << "ClapTrap " << name << " destroy" << std::endl;

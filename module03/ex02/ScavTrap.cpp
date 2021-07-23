@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 
-ScavTrap& ScavTrap::operator= (const ScavTrap &clap)
+ScavTrap& ScavTrap::operator= ( const ScavTrap &clap )
 {
 	name = clap.name;
 	hitpoints = clap.hitpoints;
@@ -17,7 +17,15 @@ ScavTrap::ScavTrap( std::string name ):ClapTrap(name)
 	std::cout << "ScavTrap " << name << " created" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &clap):ClapTrap(clap.name)
+ScavTrap::ScavTrap( void ):ClapTrap()
+{
+	ClapTrap::hitpoints = 100;
+	ClapTrap::energypoints = 50;
+	ClapTrap::attackDamage = 20;
+	std::cout << "ScavTrap " << name << " created" << std::endl;
+}
+
+ScavTrap::ScavTrap( const ScavTrap &clap ):ClapTrap(clap.name)
 {
 	hitpoints = clap.hitpoints;
 	attackDamage = clap.attackDamage;

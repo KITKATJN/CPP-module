@@ -9,8 +9,9 @@ private:
 
 public:
 	ScavTrap( std::string name );
-	ScavTrap(const ScavTrap &scav);
-	ScavTrap& operator= (const ScavTrap &clap);
+	ScavTrap( void );
+	ScavTrap( const ScavTrap &scav );
+	ScavTrap& operator= ( const ScavTrap &clap );
 	~ScavTrap();
 
 	void guardGate( void );
