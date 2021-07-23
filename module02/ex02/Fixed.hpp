@@ -29,44 +29,23 @@ public:
 	bool operator>=(const Fixed &fixed) const ;
 
 	Fixed& operator=(const Fixed &fixed);
-	Fixed operator+(const Fixed &fixed) ;
+	Fixed operator+(const Fixed &fixed);
+	Fixed operator-(const Fixed &fixed);
+	Fixed operator*(const Fixed &fixed);
+	Fixed operator/(const Fixed &fixed);
+
+	Fixed& operator++ ( void );
+	Fixed& operator-- ( void );
+	Fixed operator++ ( int );
+	Fixed operator-- ( int );
+
+	static Fixed const &min(Fixed const &first, Fixed const &second);
+	static Fixed const &max(Fixed const &first, Fixed const &second);
+	static Fixed &min(Fixed &first, Fixed &second);
+	static Fixed &max(Fixed &first, Fixed &second);
 };
 
 std::ostream &operator<<(std::ostream &os, const Fixed &fixed);
 
-bool Fixed::operator>(const Fixed &fixed) const
-{
-	return this->getRawBits() > fixed.getRawBits();
-}
-
-bool Fixed::operator<(const Fixed &fixed) const
-{
-	return this->getRawBits() < fixed.getRawBits();
-}
-
-bool Fixed::operator>=(const Fixed &fixed) const
-{
-	return this->getRawBits() >= fixed.getRawBits();
-}
-
-bool Fixed::operator<=(const Fixed &fixed) const
-{
-	return this->getRawBits() <= fixed.getRawBits();
-}
-
-bool Fixed::operator==(const Fixed &fixed) const
-{
-	return this->getRawBits() == fixed.getRawBits();
-}
-
-bool Fixed::operator!=(const Fixed &fixed) const
-{
-	return this->getRawBits() != fixed.getRawBits();
-}
-
-Fixed Fixed::operator+(const Fixed &fixed)
-{
-	return Fixed(this->getRawBits() + fixed.getRawBits());
-}
 
 #endif

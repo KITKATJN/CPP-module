@@ -48,7 +48,7 @@ Fixed::Fixed( const int number )
 Fixed::Fixed( const float number )
 {
 	std::cout << "Float constructor called" << std::endl;
-	this->fixed_pv = (number * (1 << fractional));
+	this->fixed_pv = roundf(number * (1 << fractional));
 }
 
 float Fixed::toFloat( void ) const

@@ -21,7 +21,7 @@ ClapTrap::ClapTrap(const ClapTrap &clap):name(clap.name)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap " << name << "  destroy" << std::endl;
+	std::cout << "ClapTrap " << name << " destroy" << std::endl;
 }
 
 void ClapTrap::attack(std::string const & target)
