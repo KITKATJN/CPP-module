@@ -33,6 +33,14 @@ ScavTrap::ScavTrap( const ScavTrap &clap ):ClapTrap(clap.name)
 	std::cout << "ScavTrap " << name << " copied" << std::endl;
 }
 
+void ScavTrap::attack( std::string const & target )
+{
+	this->energypoints--;
+	std::cout << "ScavTrap " << this->name << " attacks ";
+	std::cout << target << ", causing " << attackDamage<< " points of damage!" << std::endl;
+	std::cout << "Now energy is " << this->energypoints << std::endl;
+}
+
 ScavTrap::~ScavTrap()
 {
 	std::cout << "ScavTrap " << name << " destroy" << std::endl;

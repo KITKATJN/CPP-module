@@ -39,7 +39,6 @@ DiamondTrap::DiamondTrap( std::string name ):ClapTrap(name + "_clap_name"), Frag
 
 DiamondTrap::DiamondTrap( void ):ClapTrap("Alex_clap_name"), FragTrap("Alex_clap_name"), ScavTrap("Alex_clap_name")
 {
-	this->name = name;
 	this->hitpoints = FragTrap::hitpoints_frag;
 	this->attackDamage = FragTrap::attackDamage_frag;
 	// std::cout << "DiamondTrap hitpoints = " << DiamondTrap::hitpoints << std::endl;

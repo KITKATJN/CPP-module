@@ -47,6 +47,14 @@ FragTrap::FragTrap( void ):ClapTrap()
 	std::cout << "FragTrap " << name << " created" << std::endl;
 }
 
+void FragTrap::attack( std::string const & target )
+{
+	this->energypoints--;
+	std::cout << "ClapTrap " << this->name << " attacks ";
+	std::cout << target << ", causing " << attackDamage<< " points of damage!" << std::endl;
+	std::cout << "Now energy is " << this->energypoints << std::endl;
+}
+
 FragTrap::~FragTrap()
 {
 	std::cout << "FragTrap " << name << " destroy" << std::endl;
