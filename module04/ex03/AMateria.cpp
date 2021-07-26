@@ -4,6 +4,9 @@ std::string const & AMateria::getType() const{
 	return type;
 }
 
+AMateria::~AMateria(){
+}
+
 AMateria::AMateria(std::string const & type){
 	this->type = type;
 }
