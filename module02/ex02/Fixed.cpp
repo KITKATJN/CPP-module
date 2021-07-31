@@ -145,13 +145,13 @@ Fixed Fixed::operator*(const Fixed &fixed)
 {
 
 	Fixed fix(*this);
-	fix.setRawBits((this->getRawBits() * fixed.getRawBits()) / (1 << Fixed::fractional));
+	fix.setRawBits((this->getRawBits() * fixed.getRawBits()) >> Fixed::fractional);
 	return fix;
 }
 
 Fixed Fixed::operator/(const Fixed &fixed)
 {
 	Fixed fix(*this);
-	fix.setRawBits((this->getRawBits() * (1 << Fixed::fractional)) / fixed.getRawBits());
+	fix.setRawBits((this->getRawBits() << Fixed::fractional) / fixed.getRawBits());
 	return fix;
 }

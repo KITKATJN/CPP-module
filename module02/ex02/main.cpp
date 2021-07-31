@@ -13,5 +13,7 @@ int main( void ) {
 	std::cout << Fixed::min( a, b ) << std::endl;
 	Fixed const b1( Fixed( 4.06f ) / Fixed( 2 ));
 	std::cout << b1 << std::endl;
+	Fixed const b2( Fixed( 4.06f ) * Fixed( 2 ));
+	std::cout << b2 << std::endl;
 	return 0;
 }
