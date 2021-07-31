@@ -10,6 +10,7 @@ int main( void ) {
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << Fixed::min( a, b ) << std::endl;
 	Fixed const b1( Fixed( 4.06f ) / Fixed( 2 ));
 	std::cout << b1 << std::endl;
 	return 0;

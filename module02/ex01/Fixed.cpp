@@ -58,5 +58,5 @@ float Fixed::toFloat( void ) const
 
 int Fixed::toInt( void ) const
 {
-	return this->fixed_pv >> this->fractional;
+	return this->fixed_pv / (1 << this->fractional);
 }

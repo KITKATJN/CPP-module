@@ -89,7 +89,6 @@ Fixed Fixed::operator-- ( int )
 	return prev;
 }
 
-
 Fixed& Fixed::operator++ ( void )
 {
 	this->fixed_pv++;
@@ -145,14 +144,14 @@ Fixed Fixed::operator-(const Fixed &fixed)
 Fixed Fixed::operator*(const Fixed &fixed)
 {
 
-	Fixed val(*this);
-	val.setRawBits((this->getRawBits() * fixed.getRawBits()) / (1 << Fixed::fractional));
-	return (val);
+	Fixed fix(*this);
+	fix.setRawBits((this->getRawBits() * fixed.getRawBits()) / (1 << Fixed::fractional));
+	return fix;
 }
 
 Fixed Fixed::operator/(const Fixed &fixed)
 {
-	Fixed val(*this);
-	val.setRawBits((this->getRawBits() * (1 << Fixed::fractional)) / fixed.getRawBits());
-	return (val);
+	Fixed fix(*this);
+	fix.setRawBits((this->getRawBits() * (1 << Fixed::fractional)) / fixed.getRawBits());
+	return fix;
 }
