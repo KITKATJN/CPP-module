@@ -10,6 +10,7 @@ int main()
 	scav.attack("Andrey");
 	scav.takeDamage(10);
 	ScavTrap scav_copy(scav);
+	scav.~ScavTrap();
 	scav_copy.takeDamage(40);
 	scav_copy.beRepaired(30);
 	ScavTrap scav_copy2("Mike");

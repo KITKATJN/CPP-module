@@ -57,3 +57,12 @@ void DiamondTrap::whoAmI( void )
 	std::cout << "I am " << this->name << " and ";
 	std::cout << ScavTrap::name << std::endl;
 }
+
+void DiamondTrap::attack( std::string const & target )
+{
+	ScavTrap::attack(target);
+	// this->energypoints--;
+	// std::cout << "ClapTrap " << this->name << " attacks ";
+	// std::cout << target << ", causing " << attackDamage<< " points of damage!" << std::endl;
+	// std::cout << "Now energy is " << this->energypoints << std::endl;
+}

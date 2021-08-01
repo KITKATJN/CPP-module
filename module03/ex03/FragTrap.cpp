@@ -8,7 +8,7 @@ FragTrap::FragTrap( const FragTrap &clap ):ClapTrap(clap.name)
 	hitpoints_frag = clap.hitpoints;
 	attackDamage_frag = clap.attackDamage;
 	energypoints_frag = clap.energypoints;
-	std::cout << "ScavTrap " << name << " copied" << std::endl;
+	std::cout << "FragTrap " << name << " copied" << std::endl;
 }
 
 FragTrap& FragTrap::operator= ( const FragTrap &clap )
@@ -50,7 +50,7 @@ FragTrap::FragTrap( void ):ClapTrap()
 void FragTrap::attack( std::string const & target )
 {
 	this->energypoints--;
-	std::cout << "ClapTrap " << this->name << " attacks ";
+	std::cout << "FragTrap " << this->name << " attacks ";
 	std::cout << target << ", causing " << attackDamage<< " points of damage!" << std::endl;
 	std::cout << "Now energy is " << this->energypoints << std::endl;
 }

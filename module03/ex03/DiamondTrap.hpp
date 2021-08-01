@@ -15,6 +15,7 @@ public:
 	DiamondTrap( const DiamondTrap &frag );
 	DiamondTrap& operator= ( const DiamondTrap &clap );
 	void whoAmI( void );
+	void attack( std::string const & target );
 };
 
 

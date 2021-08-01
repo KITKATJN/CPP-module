@@ -11,13 +11,13 @@ int main()
 	diamond.highFivesGuys();
 	diamond.guardGate();
 	diamond.attack("Lucy");
-	diamond.takeDamage(90);
-	diamond.beRepaired(80);
-	DiamondTrap Mary(diamond);
-	Mary.attack("Sam");
-	Mary.beRepaired(10);
-	diamond = Mary;
-	diamond.takeDamage(10);
-	diamond.attack("Roy");
+	// diamond.takeDamage(90);
+	// diamond.beRepaired(80);
+	// DiamondTrap Mary(diamond);
+	// Mary.attack("Sam");
+	// Mary.beRepaired(10);
+	// diamond = Mary;
+	// diamond.takeDamage(10);
+	// diamond.attack("Roy");
 	return 0;
 }
