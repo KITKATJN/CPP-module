@@ -16,8 +16,6 @@ public:
 
 	void guardGate( void );
 	virtual void attack( std::string const & target );
-	virtual void takeDamage( unsigned int amount );
-	virtual void beRepaired( unsigned int amount );
 };
 
 #endif

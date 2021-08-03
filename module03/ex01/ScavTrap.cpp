@@ -50,19 +50,3 @@ void ScavTrap::attack( std::string const & target ){
 	std::cout << target << ", causing " << attackDamage<< " points of damage!" << std::endl;
 	std::cout << "Now energy is " << this->energypoints << std::endl;
 }
-
-void ScavTrap::takeDamage(unsigned int amount)
-{
-	this->hitpoints -= amount;
-	std::cout << "ScavTrap " << this->name << " takes ";
-	std::cout << amount << " points of damage!" << std::endl;
-	std::cout << "Now hitpoints is " << this->hitpoints << std::endl;
-}
-
-void ScavTrap::beRepaired(unsigned int amount)
-{
-	this->hitpoints += amount;
-	std::cout << "ScavTrap " << this->name << " repaired ";
-	std::cout << amount << " points of hill!" << std::endl;
-	std::cout << "Now hitpoints is " << this->hitpoints << std::endl;
-}
