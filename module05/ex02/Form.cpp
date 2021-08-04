@@ -50,6 +50,10 @@ const char* Form::GradeTooLowException::what() const throw(){
 	return "ExceptionForm: grade too low";
 };
 
+const char* Form::FormSignException::what() const throw(){
+	return "Form exception: form dont sign";
+}
+
 bool Form::getIsSigned( void ) const{
 	return is_signed;
 }

@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include <ctime>
 class Bureaucrat;
 #include "Bureaucrat.hpp"
 
@@ -16,7 +17,7 @@ private:
 	Form( void );
 public:
 	Form( std::string name, int grade_to_sign, int grade_to_execute );
-	~Form();
+	virtual ~Form();
 	Form( const Form &bure );
 	Form& operator= ( const Form &bure );
 
@@ -28,12 +29,17 @@ public:
 		virtual const char* what() const throw();
 	};
 
+	class FormSignException:public std::exception{
+		virtual const char* what() const throw();
+	};
+
 	std::string const getName( void ) const;
 	int getGradeToSign( void ) const;
 	int getGradeToExecute( void ) const;
 	bool getIsSigned( void ) const;
 
 	void beSigned( Bureaucrat const &bure );
+	virtual void execute(Bureaucrat const & executor) = 0;
 };
 
 std::ostream &operator<<(std::ostream &out, Form const &form);

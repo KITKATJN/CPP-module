@@ -1,13 +1,13 @@
 NAME = bureaucrat
 
-SRCS = main.cpp Bureaucrat.cpp Form.cpp
+SRCS = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp
 OBJ 	=	$(SRCS:.cpp=.o)
 CC = clang++
 
 CFLAGS  = -Wall -Wextra -Werror
 all:	$(NAME)
 
-$(NAME):	$(OBJ) Bureaucrat.hpp Form.hpp
+$(NAME):	$(OBJ) Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 .cpp.o:

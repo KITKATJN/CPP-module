@@ -1,16 +1,17 @@
 #include <iostream>
 #include "Bureaucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int main(void)
 {
 	try
 	{
-		Bureaucrat Alex("Alex", 100);
-		std::cout << Alex << std::endl;
-		Form p322("p322", 100, 50);
-		std::cout << p322 << std::endl;
-		Alex.signForm(p322);
-		std::cout << p322 << std::endl;
+		Form *t = new ShrubberyCreationForm("passport");
+		Bureaucrat Al("Alex", 100);
+		Al.signForm(*t);
+		t->execute(Al);
+		delete t;
 	}
 	catch(const std::exception& e)
 	{
@@ -19,13 +20,11 @@ int main(void)
 	std::cout << std::endl;
 	try
 	{
-		Bureaucrat Alex("Alex", 100);
-		std::cout << Alex << std::endl;
-		Form passport("Passport", 100, 101);
-		std::cout << passport << std::endl;
-		Alex.signForm(passport);
-		std::cout << passport << std::endl;
-		Alex.signForm(passport);
+		Form *t = new ShrubberyCreationForm("passport2");
+		Bureaucrat Al("Alex2", 145);
+		Al.signForm(*t);
+		t->execute(Al);
+		delete t;
 	}
 	catch(const std::exception& e)
 	{
@@ -34,11 +33,24 @@ int main(void)
 	std::cout << std::endl;
 	try
 	{
-		Bureaucrat Alex("Alex", 100);
-		std::cout << Alex << std::endl;
-		Form passport("Passport", 99, 90);
-		std::cout << passport << std::endl;
-		Alex.signForm(passport);
+		Form *t = new RobotomyRequestForm("passport3");
+		Bureaucrat Al("Alex3", 50);
+		Al.signForm(*t);
+		t->execute(Al);
+		delete t;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+		try
+	{
+		Form *t = new RobotomyRequestForm("passport4");
+		Bureaucrat Al("Alex4", 45);
+		Al.signForm(*t);
+		t->execute(Al);
+		delete t;
 	}
 	catch(const std::exception& e)
 	{
