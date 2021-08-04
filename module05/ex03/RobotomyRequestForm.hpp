@@ -2,6 +2,9 @@
 #define __ROBOTOMYREQUESTFORM_HPP__
 
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 class RobotomyRequestForm : public Form
 {
