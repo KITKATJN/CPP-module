@@ -1,24 +1,24 @@
 #include "whatever.hpp"
 
-int main()
-{
-	int a = 10, b = 50;
-	std::cout << "a = " << a << " b = " << b << std::endl;
-	swap(a, b);
-	std::cout << "a = " << a << " b = " << b << std::endl;
-	std::cout << "min = " << min(a, b) << " max = " << max(a, b) << std::endl;
+int main( void ) {
+	int a = 2;
+	int b = 3;
+	::swap( a, b );
+	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+	std::string c = "chaine1";
+	std::string d = "chaine2";
+	::swap(c, d);
+	std::cout << "c = " << c << ", d = " << d << std::endl;
+	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+
 	std::cout << std::endl;
 	float a1 = 10.12, b1 = 10.52;
 	std::cout << "a1 = " << a1 << " b1 = " << b1 << std::endl;
-	swap(a1, b1);
+	::swap(a1, b1);
 	std::cout << "a1 = " << a1 << " b1 = " << b1 << std::endl;
-	std::cout << "min = " << min(a1, b1) << " max = " << max(a1, b1) << std::endl;
-	std::cout << std::endl;
-	std::string a2 = "string1", b2 = "string2";
-	std::cout << "a2 = " << a2 << " b2 = " << b2 << std::endl;
-	swap(a2, b2);
-	std::cout << "a2 = " << a2 << " b2 = " << b2 << std::endl;
-	std::cout << "min = " << min(a2, b2) << " max = " << max(a2, b2) << std::endl;
-
+	std::cout << "min = " << ::min(a1, b1) << " max = " << ::max(a1, b1) << std::endl;
 	return 0;
 }
