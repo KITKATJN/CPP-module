@@ -20,5 +20,15 @@ int main( void ) {
 	::swap(a1, b1);
 	std::cout << "a1 = " << a1 << " b1 = " << b1 << std::endl;
 	std::cout << "min = " << ::min(a1, b1) << " max = " << ::max(a1, b1) << std::endl;
+
+	Awesome aw1(5);
+	Awesome aw2(6);
+	std::cout << "aw1 = " << aw1.getN() << " aw2 = " << aw2.getN() << std::endl;
+	::swap(aw2, aw1);
+	std::cout << "aw1 = " << aw1.getN() << " aw2 = " << aw2.getN() << std::endl;
+	Awesome minA =::min(aw1, aw2);
+	Awesome maxA = ::max(aw1, aw2);
+	std::cout << "min = " << minA.getN() << " max = " << maxA.getN() << std::endl;
+
 	return 0;
 }

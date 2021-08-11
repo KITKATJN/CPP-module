@@ -50,5 +50,18 @@ int main(int, char**)
     }
     std::cout << "finish" << std::endl;;
     delete [] mirror;//
+
+    try
+    {
+        Array<int> numbers(0);
+        std::cout << "***" << std::endl;
+        Array<int> numbers2(5);
+        numbers2[5];
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+
     return 0;
 }
