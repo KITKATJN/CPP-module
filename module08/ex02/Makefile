@@ -1,4 +1,4 @@
-NAME = easyfind
+NAME = mutantstack
 
 SRCS = main.cpp
 OBJ 	=	$(SRCS:.cpp=.o)
